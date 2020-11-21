@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Repository.Models
 {
-   public class ProductImage
+   public class Department:BaseEntity
     {
         [Required]
-        [MaxLength(150)]
-        public string ImageUrl { get; set; }
-        public Product Product { get; set; }
+        [MaxLength(50)]
+        public string Name { get; set; }
+        public ICollection<Personal> Personals { get; set; }
     }
 }
